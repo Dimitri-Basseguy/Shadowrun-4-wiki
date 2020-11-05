@@ -1,12 +1,88 @@
 /* eslint-disable */
+import etaneiAvatar from 'src/assets/images/etanei-avatar.png';
+import baranAvatar from 'src/assets/images/baran.png';
+import jessAvatar from 'src/assets/images/jess.png';
+import khaineAvatar from 'src/assets/images/khaine.png';
+import edrianAvatar from 'src/assets/images/edrian.png';
+
+const etaneiImg = etaneiAvatar;
+const baranImg = baranAvatar;
+const jessImg = jessAvatar;
+const khaineImg = khaineAvatar;
+const edrianImg = edrianAvatar;
+
+
 export default [
   {
     id: "comp-1",
     attribut: "Agilité",
     specialization: "Carabines, Fusils d'assaut, Mitraillettes, Pistolets-mitrailleurs",
     group: "Armes à feu",
+    defausse: "Oui",
+    players: [
+      etaneiImg,
+      baranImg,
+      jessImg,
+      khaineImg,
+      edrianImg,
+    ],
     name: "Armes automatiques",
-    description: "Les personnages qui choisissent Adepte font un usage de la magie radicalement différent de celui des autres personnages éveillés, en canalisant la magie à travers leur corps et leur esprit ; ils ne lancent pas de sorts et n'invoquent pas d'esprits et n'ont pas non plus accès à l'espace astral (voir le pouvoir d'adepte Perception astrale, p. 183). Au lieu de cela, les adeptes développent des pouvoirs qui améliorent leurs capacités physiques et mentales. Un personnage doté de ce trait est un adepte et commence avec un attribut Magie de 1 qui peut être augmenté comme n'importe quel autre attribut jusqu'à un indice de 6 + grade d'initiation (voir Les attributs, p. 73). Un personnage doté de ce trait ne peut pas choisir en plus les traits Magicien, Adepte mystique ou Technomancien. \n Les personnages dotés du trait Adepte reçoivent un nombre de points de pouvoir égal à leur attribut Magie. Ces points de pouvoir sont utilisés pour acheter des pouvoirs spécifiques aux adeptes (voir p. 187). Il est possible d'acheter des points de pouvoir supplémentaires en augmentant l'attribut Magie du personnage par une dépense de Karma. Notez que l'attribut de Magie ne peut excéder être augmenté au-delà du maximum naturel de 6 sans initiation (voir L'initiation, p. 190). \n Une description complète de l'adepte se trouve à la p. 187 du chapitre Un monde éveillé ; un archétype d'adepte est par ailleurs présenté p. 103. \n Bien que ce trait soit peu coûteux, le meneur de jeu ne devrait pas laisser les joueurs en abuser. Elle ne devrait être prise que par ceux qui veulent incarner un adepte."
+    description: "La compétence Armes automatiques couvre l'utilisation des armes à feu personnelles plus grandes qu'un pistolet, capables de tirer en mode automatique, mais au canon généralement plus court qu'un fusil à canon long."
+  },
+  {
+    id: "comp-2",
+    attribut: "Agilité",
+    specialization: "Bâtons (à deux mains), Marteaux, Ma-traques, Parade",
+    group: "Combat rapproché",
+    defausse: "Oui",
+    players: [
+      etaneiImg,
+      baranImg,
+    ],
+    name: "Armes contondantes",
+    description: "Armes contondantes couvre l'utilisation d'armes de mêlée qui n'ont ni lame, ni tranchant. Cette compétence permet au personnage d'utiliser tout objet contondant un tant soi peu équilibré, de la batte de baseball au démonte-pneu, en passant par le pied de chaise."
+  },
+  {
+    id: "comp-3",
+    attribut: "Agilité",
+    specialization: "non applicable",
+    group: "Aucun",
+    defausse: "Oui",
+    players: [
+      khaineImg,
+      baranImg,
+      edrianImg,
+    ],
+    name: "Arme â distance exotique",
+    description: "Comme pour Arme de mêlée exotique, Arme à distance exotique doit être prise séparément pout chaque arme que vous souhaitez utiliser. Quelques exemples : lasers, pistolets gyrojets, lance-flammes, armes à feu cyber-implantées."
+  },
+  {
+    id: "comp-4",
+    attribut: "Agilité",
+    specialization: "En chandelle (par ex. grenade), Couteaux de lancer, Directes (par ex. balle de baseball), Shuriken.",
+    group: "Aucun",
+    defausse: "Oui",
+    players: [
+      khaineImg,
+      baranImg,
+      edrianImg,
+    ],
+    name: "Armes de jet",
+    description: "La compétence Armes de jet couvre l'utilisation de tout objet lancé par le personnage."
+  },
+  {
+    id: "comp-5",
+    attribut: "Agilité",
+    specialization: "Canons d'assaut, Lance-grenades, Lance-roquettes, Missiles guidés, Mitrailleuses.",
+    group: "Aucun",
+    defausse: "Oui",
+    players: [
+      khaineImg,
+      baranImg,
+      edrianImg,
+    ],
+    name: "Armes lourdes",
+    description: "La compétence Armes lourdes permet à l'utilisateur de manipuler les armes à feu ou de trait plus grosses qu'un fusil d'assaut, notamment les armes de grande taille montées sur trépied, monture à crochet, gyrostabilisateur ou emplacements fixes (mais pas dans ou sur des véhicules)."
   },
 ];
 /* eslint-enable */

@@ -6,7 +6,7 @@ import DetailsCompetence from './DetailsCompetence';
 import './competences.scss';
 
 const Competence = ({
-  name, category, description, coût,
+  name, group, description, specialization, attribut, defausse, players,
 }) => {
   const [showDetails, setShowDetails] = useState(false);
   const onClick = () => {
@@ -18,19 +18,31 @@ const Competence = ({
     }
   };
 
+  // const loardPlayerAvatar = () => {
+  //   players.map((player)) => (
+  //     console.log('player test');
+  //   )
+  // };
+
   return (
-    <article className="task">
-      <h2
-        className="task__title"
-        onClick={onClick}
-      >
-        {name}
-      </h2>
+    <article className="comp">
+      <div className="comp__header">
+        <h2
+          className="comp__title"
+          onClick={onClick}
+        >
+          {name}
+        </h2>
+        <p className="comp__category">({attribut})</p>
+      </div>
       { showDetails ? (
         <DetailsCompetence
-          category={category}
+          group={group}
+          players={players}
+          defausse={defausse}
+          attribut={attribut}
           description={description}
-          coût={coût}
+          specialization={specialization}
         />
       ) : null }
     </article>
@@ -39,9 +51,12 @@ const Competence = ({
 
 Competence.propTypes = {
   name: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
+  group: PropTypes.string.isRequired,
+  defausse: PropTypes.string.isRequired,
+  attribut: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  coût: PropTypes.number.isRequired,
+  specialization: PropTypes.string.isRequired,
+  players: PropTypes.array.isRequired,
 };
 
 export default Competence;

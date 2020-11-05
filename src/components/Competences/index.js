@@ -12,15 +12,17 @@ import './competences.scss';
 //   description: "Un métahumain disposant du trait."
 // },
 
-const Competences = ({ compData, searchValue, setSearchValue }) => (
+const Competences = ({
+  compData, searchValue, setSearchValue, etaneiImg,
+}) => (
   <>
     <main>
-      <h1 className="main-title">Les Traits</h1>
+      <h1 className="main-title">Les Compétences</h1>
       <p className="main-desc">Quand vous voulez que votre personnage prenne part à l'action et accomplisse quelque chose de plus compliqué que respirer, parler ou se tenir debout, vous utilisez ses compéten-ces. Les compétences représentent les capacités et les connaissances acquises par un personnage.</p>
       <input
         className="search"
         type="text"
-        placeholder="Rechercher des traits"
+        placeholder="Rechercher des compétences"
         value={searchValue}
         onChange={(event) => {
           setSearchValue(event.target.value);
@@ -33,6 +35,7 @@ const Competences = ({ compData, searchValue, setSearchValue }) => (
             // enveloppe -> déverse toutes les données de la task
             // si nouveau éléments les ajouter dans task.js !
             {...comp}
+            etaneiImg={etaneiImg}
           />
         ))}
       </ul>
