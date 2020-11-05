@@ -15,7 +15,7 @@ const DetailsCompetence = ({
   </>
 );
 
-DetailsTrait.propTypes = {
+DetailsCompetence.propTypes = {
   category: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   coût: PropTypes.number.isRequired,

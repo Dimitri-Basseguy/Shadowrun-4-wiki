@@ -37,7 +37,7 @@ const Competence = ({
   );
 };
 
-Trait.propTypes = {
+Competence.propTypes = {
   name: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
