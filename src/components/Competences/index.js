@@ -13,7 +13,7 @@ import './competences.scss';
 // },
 
 const Competences = ({
-  compData, searchValue, setSearchValue, etaneiImg,
+  compData, searchValue, setSearchValue,
 }) => (
   <>
     <main>
@@ -35,7 +35,6 @@ const Competences = ({
             // enveloppe -> déverse toutes les données de la task
             // si nouveau éléments les ajouter dans task.js !
             {...comp}
-            etaneiImg={etaneiImg}
           />
         ))}
       </ul>

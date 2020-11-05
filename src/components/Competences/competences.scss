@@ -80,6 +80,11 @@
         margin-right: 1rem;
     }
 
+    &__type {
+        width: 16px;
+        margin-right: .5rem;
+    }
+
     &__cout {
         font-weight: bold;
         margin-right: 1rem;
@@ -87,6 +92,7 @@
 
     &__cout {
         margin-right: 1rem;
+        text-align: left;
     }
 
     &__container {

@@ -4,11 +4,10 @@ import PropTypes from 'prop-types';
 import './traits.scss';
 
 const DetailsTrait = ({
-  category, description, coût,
+  description, coût,
 }) => (
   <>
     <div className="task__infos">
-      <p className="task__category">{category}</p>
       <p className="task__cout">{coût} PC</p>
     </div>
     <p className="task__description">{description}</p>
@@ -16,9 +15,10 @@ const DetailsTrait = ({
 );
 
 DetailsTrait.propTypes = {
-  category: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  coût: PropTypes.number.isRequired,
+  coût: PropTypes.oneOfType([
+    PropTypes.string, PropTypes.number,
+  ]).isRequired,
 };
 
 export default DetailsTrait;

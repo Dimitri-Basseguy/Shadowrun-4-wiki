@@ -6,7 +6,7 @@ import DetailsCompetence from './DetailsCompetence';
 import './competences.scss';
 
 const Competence = ({
-  name, group, description, specialization, attribut, defausse, players,
+  name, group, description, specialization, attribut, defausse, players, type,
 }) => {
   const [showDetails, setShowDetails] = useState(false);
   const onClick = () => {
@@ -27,17 +27,14 @@ const Competence = ({
   return (
     <article className="comp">
       <div className="comp__header">
-        <h2
-          className="comp__title"
-          onClick={onClick}
-        >
-          {name}
-        </h2>
+        <img src={type} className="comp__type" alt="" />
+        <h2 className="comp__title" onClick={onClick}>{name}</h2>
         <p className="comp__category">({attribut})</p>
       </div>
       { showDetails ? (
         <DetailsCompetence
           group={group}
+          type={type}
           players={players}
           defausse={defausse}
           attribut={attribut}
@@ -57,6 +54,7 @@ Competence.propTypes = {
   description: PropTypes.string.isRequired,
   specialization: PropTypes.string.isRequired,
   players: PropTypes.array.isRequired,
+  type: PropTypes.string.isRequired,
 };
 
 export default Competence;

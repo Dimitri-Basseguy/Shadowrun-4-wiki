@@ -20,12 +20,15 @@ const Trait = ({
 
   return (
     <article className="task">
-      <h2 
-        className="task__title"
-        onClick={onClick}
-      >
-        {name}
-      </h2>
+      <div className="comp__header">
+        <img src={category} className="task__category" alt="" />
+        <h2
+          className="task__title"
+          onClick={onClick}
+        >
+          {name}
+        </h2>
+      </div>
       { showDetails ? (
         <DetailsTrait
           category={category}
@@ -41,7 +44,9 @@ Trait.propTypes = {
   name: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  coût: PropTypes.number.isRequired,
+  coût: PropTypes.oneOfType([
+    PropTypes.string, PropTypes.number,
+  ]).isRequired,
 };
 
 export default Trait;
