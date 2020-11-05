@@ -246,5 +246,60 @@ export default [
     name: "Escalade",
     description: "Escalade est utilisée pour l'ascension d'obstacles verticaux ou de murs, avec ou sans équipement. Voir Escalader, p. 115."
   },
+  {
+    id: "comp-22",
+    attribut: "Agilité",
+    type: Physique,
+    specialization: "Prestidigitation, Pickpocket, Vol à l'étalage",
+    group: "Furtivité",
+    defausse: "Oui",
+    players: [],
+    name: "Escamotage",
+    description: "La compétence Escamotage est faite pour ceux qui ont les mains trop rapides pour qu'on puisse les suivre des yeux, ce qui demande de savoir tromper le spectateur tout en restant précis dans ses mouvements. Cette compétence est employée pour dissimuler de petits objets un peu partout sur et autour du personnage et pour les récupérer sur d'autres sans être repéré."
+  },
+  {
+    id: "comp-23",
+    attribut: "Agilité",
+    type: Physique,
+    specialization: "par type de liens (Bracelets, Corde, Col-son, etc.)",
+    group: "Aucun",
+    defausse: "Oui",
+    players: [],
+    name: "Evasion",
+    description: "Évasion entre en jeu quand un personnage tente de se libérer de liens ou de menottes sans utiliser la force brute. Voir S'évader, p. 115."
+  },
+  {
+    id: "comp-24",
+    attribut: "Intuition",
+    type: Physique,
+    specialization: "Planques, Semer, Suivre",
+    group: "Furtivité",
+    defausse: "Oui",
+    players: [],
+    name: "Filature",
+    description: "Filature est employée pour suivre discrètement quelqu'un sans se faire repérer ou au contraire pour s'assurer qu'on n'est pas suivi (voir Rester furtif, p. 116)."
+  },
+  {
+    id: "comp-25",
+    attribut: "Agilité",
+    type: Physique,
+    specialization: "Equilibre, Réception de chute, Danse, Roulades, Saut",
+    group: "Athlétisme",
+    defausse: "Oui",
+    players: [],
+    name: "Gymnastique",
+    description: "Gymnastique est utilisée pour réaliser des acrobaties, garder l'équilibre, mais aussi sauter, se recroqueviller et effectuer des roulés-boulés. Voir Sauter, p. 116."
+  },
+  {
+    id: "comp-25",
+    attribut: "Agilité",
+    type: Physique,
+    specialization: "Urbaine, en Véhicule, en Milieu naturel, par moyen de détection (Détecteurs de mouvement, de Pres-sion, Thermiques, etc.)",
+    group: "Furtivité",
+    defausse: "Oui",
+    players: [],
+    name: "Infiltration",
+    description: "Infiltration est la compétence utilisée quand un personnage tente de passer outre des systèmes de sécurité ou d'autres personnages sans se faire détecter."
+  },
 ];
 /* eslint-enable */
