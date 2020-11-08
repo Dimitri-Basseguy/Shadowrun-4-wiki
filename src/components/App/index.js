@@ -27,6 +27,8 @@ const App = () => {
   const [searchTraits, setSearchTraits] = useState('');
   /** Valeur du champ de recherche Comp */
   const [searchComp, setSearchComp] = useState('');
+  /** Valeur des joueurs */
+  const [player, setPlayer] = useState('');
 
   const handleChangeSearch = (newValue) => {
     setSearchTraits(newValue);
@@ -36,6 +38,14 @@ const App = () => {
     setSearchComp(newValue);
   };
 
+  const handleClicPlayers = (newValue) => {
+    setPlayer(newValue);
+  };
+
+  /**
+   * Filtre les traits en fonction de la recherche
+   * @return array of object
+   */
   const gettraits = () => {
     let filteredTraits;
     if (searchTraits.trim().length === 0) {
@@ -55,17 +65,43 @@ const App = () => {
     return filteredTraits;
   };
 
+  /**
+   * Filtre les compétences en fonction d'un joueur
+   * @return array of object
+   */
+  const getCompsByPlayer = () => {
+    let filteredCompsByPlayers = competences;
+    if (player === '') {
+      filteredCompsByPlayers = competences;
+    }
+    else {
+      filteredCompsByPlayers = competences.filter(
+        (competence) => competence.players.includes(player),
+      );
+    }
+
+    return filteredCompsByPlayers;
+  };
+
+  const filteredTraits = gettraits();
+  const filteredCompsByPlayers = getCompsByPlayer();
+  // console.log('compétences', player, ' : ', filteredCompsByPlayers);
+
+  /**
+   * Filtre les compétences en fonction de la recherche
+   * @return array of object
+   */
   const getComps = () => {
-    let filteredComps;
+    let filteredComps = filteredCompsByPlayers;
     if (searchComp.trim().length === 0) {
-      filteredComps = competences;
+      filteredComps = filteredCompsByPlayers;
     }
     else {
       // on prépare search (variable intermediaire pour ne pas refaire à chaque boucle
       const searchoptimized = searchComp.trim().toLowerCase();
       // filter la liste des devises en fonction de search
       // eslint-disable-next-line arrow-body-style
-      filteredComps = competences.filter((competence) => {
+      filteredComps = filteredCompsByPlayers.filter((competence) => {
         // true si je veux conserver l'élément, false sinon
         return competence.name.toLowerCase().includes(searchoptimized);
       });
@@ -74,7 +110,6 @@ const App = () => {
     return filteredComps;
   };
 
-  const filteredTraits = gettraits();
   const filteredComps = getComps();
 
   return (
@@ -94,6 +129,7 @@ const App = () => {
             compData={filteredComps}
             searchValue={searchComp}
             setSearchValue={handleChangeSearchComp}
+            setPlayerValue={handleClicPlayers}
           />
         </Route>
       </div>

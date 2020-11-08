@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import etaneiAvatar from 'src/assets/images/etanei-avatar.png';
+import baranAvatar from 'src/assets/images/baran.png';
+import jessAvatar from 'src/assets/images/jess.png';
+import khaineAvatar from 'src/assets/images/khaine.png';
+import edrianAvatar from 'src/assets/images/edrian.png';
 import Competence from './competence';
 import './competences.scss';
 
@@ -13,12 +18,88 @@ import './competences.scss';
 // },
 
 const Competences = ({
-  compData, searchValue, setSearchValue,
+  compData, searchValue, setSearchValue, setPlayerValue,
 }) => (
   <>
     <main>
       <h1 className="main-title">Les Compétences</h1>
       <p className="main-desc">Quand vous voulez que votre personnage prenne part à l'action et accomplisse quelque chose de plus compliqué que respirer, parler ou se tenir debout, vous utilisez ses compéten-ces. Les compétences représentent les capacités et les connaissances acquises par un personnage.</p>
+      <div className="comp__container--avatar">
+        <button
+          type="button"
+          className="comp__btn"
+          onClick={() => {
+            setPlayerValue('');
+          }}
+        >
+          All
+        </button>
+        <button
+          type="button"
+          className="comp__btn"
+          onClick={() => {
+            setPlayerValue('etanei');
+          }}
+        >
+          <img
+            className="comp__avatar"
+            src={etaneiAvatar}
+            alt="bouton étanei"
+          />
+        </button>
+        <button
+          type="button"
+          className="comp__btn"
+          onClick={() => {
+            setPlayerValue('baran');
+          }}
+        >
+          <img
+            className="comp__avatar"
+            src={baranAvatar}
+            alt="bouton baran"
+          />
+        </button>
+        <button
+          type="button"
+          className="comp__btn"
+          onClick={() => {
+            setPlayerValue('jess');
+          }}
+        >
+          <img
+            className="comp__avatar"
+            src={jessAvatar}
+            alt="bouton étanei"
+          />
+        </button>
+        <button
+          type="button"
+          className="comp__btn"
+          onClick={() => {
+            setPlayerValue('khaine');
+          }}
+        >
+          <img
+            className="comp__avatar"
+            src={khaineAvatar}
+            alt="bouton khaine"
+          />
+        </button>
+        <button
+          type="button"
+          className="comp__btn"
+          onClick={() => {
+            setPlayerValue('edrian');
+          }}
+        >
+          <img
+            className="comp__avatar"
+            src={edrianAvatar}
+            alt="bouton edrian"
+          />
+        </button>
+      </div>
       <input
         className="search"
         type="text"
@@ -50,6 +131,7 @@ Competences.propTypes = {
   ).isRequired,
   searchValue: PropTypes.string.isRequired,
   setSearchValue: PropTypes.func.isRequired,
+  setPlayerValue: PropTypes.func.isRequired,
 };
 
 export default Competences;
