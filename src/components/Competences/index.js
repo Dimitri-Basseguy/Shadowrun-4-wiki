@@ -22,7 +22,7 @@ const Competences = ({
 }) => (
   <>
     <main>
-      <h1 className="main-title">Les Compétences</h1>
+      <h1 className="main-title">Les Compétences ({compData.length})</h1>
       <p className="main-desc">Quand vous voulez que votre personnage prenne part à l'action et accomplisse quelque chose de plus compliqué que respirer, parler ou se tenir debout, vous utilisez ses compéten-ces. Les compétences représentent les capacités et les connaissances acquises par un personnage.</p>
       <div className="comp__container--avatar">
         <button
