@@ -1,6 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactTooltip from 'react-tooltip';
 
+import Combat from 'src/assets/images/comp_combat.png';
+import Magic from 'src/assets/images/comp_magic.png';
+import Physique from 'src/assets/images/physique.png';
+import Resonance from 'src/assets/images/comp_resonance.png';
+import Sociale from 'src/assets/images/comp_sociale.png';
+import Tech from 'src/assets/images/comp_tech.png';
+import Pilotage from 'src/assets/images/comp_pilotage.png';
+import Programme from 'src/assets/images/comp_program.png';
 import etaneiAvatar from 'src/assets/images/etanei-avatar.png';
 import baranAvatar from 'src/assets/images/baran.png';
 import jessAvatar from 'src/assets/images/jess.png';
@@ -99,6 +108,17 @@ const Competences = ({
             alt="bouton edrian"
           />
         </button>
+      </div>
+      <div className="comp__container--avatar">
+        <img src={Combat} data-tip="Compétences actives de combat" className="comp__type" alt="" />
+        <img src={Magic} data-tip="Compétences actives de magie" className="comp__type" alt="" />
+        <img src={Physique} data-tip="Compétences actives de physique" className="comp__type" alt="" />
+        <img src={Resonance} data-tip="Compétences actives de résonance" className="comp__type" alt="" />
+        <img src={Sociale} data-tip="Compétences actives sociales" className="comp__type" alt="" />
+        <img src={Tech} data-tip="Compétences actives techniques" className="comp__type" alt="" />
+        <img src={Pilotage} data-tip="Compétences actives de pilotage" className="comp__type" alt="" />
+        <img src={Programme} data-tip="Programmes courants" className="comp__type" alt="" />
+        <ReactTooltip />
       </div>
       <input
         className="search"
