@@ -85,7 +85,6 @@ const App = () => {
 
   const filteredTraits = gettraits();
   const filteredCompsByPlayers = getCompsByPlayer();
-  // console.log('compétences', player, ' : ', filteredCompsByPlayers);
 
   /**
    * Filtre les compétences en fonction de la recherche

@@ -29,31 +29,31 @@
     align-items: center;
     padding: 1rem;
     height: auto;
-    border-top: 1px solid #edeefa;
+    border-top: 1px solid $midle-green;
     // border-bottom: 1px solid #f0f1f7;
     font-size: .9em;
     text-align: justify;
     line-height: 1.1;
-    color: #240229;
+    color: $dark-typo;
     transition: background-color 0.5s ease;
     transition: transform 0.2s ease;
     transition: box-shadow 0.2s ease;
 
     &:hover {
         cursor: pointer;
-        background-color: white;
+        background-color: $midle-green;
         border-radius: 5px;
         -webkit-transform: scale(1.02);
         -ms-transform: scale(1.02);
         transform: scale(1.02);
         // cursor: pointer;
-        -webkit-box-shadow: 0px 19px 29px -15px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 19px 29px -15px rgba(0,0,0,0.75);
-        box-shadow: 0px 19px 29px -15px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 0px 19px 29px -15px $dark-typo;
+        -moz-box-shadow: 0px 19px 29px -15px $dark-typo;
+        box-shadow: 0px 19px 29px -15px $dark-typo;
     }
 
     &__title {
-        color: $primary-color;
+        color: $orange;
         font-weight: bold;
         font-size: 1rem;
     }
@@ -72,5 +72,6 @@
 
     &__cout {
         font-weight: bold;
+        color: $green-typo;
     }
 }

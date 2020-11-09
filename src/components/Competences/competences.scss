@@ -1,7 +1,7 @@
 @import 'src/styles/vars';
 
 .main-title {
-    color: $primary-color;
+    color: $orange;
     text-transform: uppercase;
     text-align: center;
     font-size: 2.5em;
@@ -13,6 +13,7 @@
     font-style: italic;
     padding: 1rem;
     line-height: 1.1;
+    color: $green-typo;
 }
 
 .search {
@@ -21,6 +22,8 @@
     border: none;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    background-color: $dark-green;
+    color: $dark-typo;
 }
 
 .comp {
@@ -29,27 +32,27 @@
     align-items: center;
     padding: 1rem;
     height: auto;
-    border-top: 1px solid #edeefa;
+    border-top: 1px solid $midle-green;
     // border-bottom: 1px solid #f0f1f7;
     font-size: .9em;
     text-align: justify;
     line-height: 1.1;
-    color: #240229;
+    color: $dark-typo;
     transition: background-color 0.5s ease;
     transition: transform 0.2s ease;
     transition: box-shadow 0.2s ease;
 
     &:hover {
         cursor: pointer;
-        background-color: white;
+        background-color: $midle-green;
         border-radius: 5px;
         -webkit-transform: scale(1.02);
         -ms-transform: scale(1.02);
         transform: scale(1.02);
         // cursor: pointer;
-        -webkit-box-shadow: 0px 19px 29px -15px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 19px 29px -15px rgba(0,0,0,0.75);
-        box-shadow: 0px 19px 29px -15px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 0px 19px 29px -15px $dark-typo;
+        -moz-box-shadow: 0px 19px 29px -15px $dark-typo;
+        box-shadow: 0px 19px 29px -15px $dark-typo;
     }
 
     &__header {
@@ -59,7 +62,7 @@
     }
 
     &__title {
-        color: $primary-color;
+        color: $orange;
         font-weight: bold;
         font-size: 1rem;
         margin-right: 1rem;
@@ -71,7 +74,7 @@
         margin: .5rem;
         justify-content: flex-start;
         // border-top: 1px solid #edeefa;
-        border-bottom: 1px solid #edeefa;
+        border-bottom: 1px solid $green-typo;
         padding: .5rem;
     }
 
@@ -86,13 +89,9 @@
     }
 
     &__cout {
-        font-weight: bold;
+        font-style: italic;
         margin-right: 1rem;
-    }
-
-    &__cout {
-        margin-right: 1rem;
-        text-align: left;
+        color: $green-typo;
     }
 
     &__container {
@@ -108,14 +107,14 @@
     &__avatar {
         width: 40px;
         border-radius: 4px;
-        border: 1px solid $grey-color;
+        border: 1px solid $green;
         margin: .5rem;
     }
 
     &__btn {
         border: none;
         background-color: transparent;
-        color: blue;
+        color: $dark-typo;
         text-decoration: underline;
         transition: .3s ease-out;
 
