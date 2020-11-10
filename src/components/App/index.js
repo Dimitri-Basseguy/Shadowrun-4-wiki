@@ -8,6 +8,7 @@ import {
 import menuData from 'src/data/menu';
 import traitsData from 'src/data/traits';
 import compdata from 'src/data/comp';
+import logo from 'src/assets/images/logo-shadow.png';
 
 import './app.scss';
 
@@ -23,19 +24,13 @@ const App = () => {
   const [traits, setTraits] = useState(traitsData);
   /** Chargement des compétences */
   const [competences, setComptences] = useState(compdata);
-  /** Valeur du champ de recherche traits */
-  const [searchTraits, setSearchTraits] = useState('');
-  /** Valeur du champ de recherche Comp */
-  const [searchComp, setSearchComp] = useState('');
+  /** Valeur du champ de recherche */
+  const [search, setSearch] = useState('');
   /** Valeur des joueurs */
   const [player, setPlayer] = useState('');
 
   const handleChangeSearch = (newValue) => {
-    setSearchTraits(newValue);
-  };
-
-  const handleChangeSearchComp = (newValue) => {
-    setSearchComp(newValue);
+    setSearch(newValue);
   };
 
   const handleClicPlayers = (newValue) => {
@@ -48,12 +43,12 @@ const App = () => {
    */
   const gettraits = () => {
     let filteredTraits;
-    if (searchTraits.trim().length === 0) {
+    if (search.trim().length === 0) {
       filteredTraits = traits;
     }
     else {
       // on prépare search (variable intermediaire pour ne pas refaire à chaque boucle
-      const searchoptimized = searchTraits.trim().toLowerCase();
+      const searchoptimized = search.trim().toLowerCase();
       // filter la liste des devises en fonction de search
       // eslint-disable-next-line arrow-body-style
       filteredTraits = traits.filter((trait) => {
@@ -83,21 +78,18 @@ const App = () => {
     return filteredCompsByPlayers;
   };
 
-  const filteredTraits = gettraits();
-  const filteredCompsByPlayers = getCompsByPlayer();
-
   /**
    * Filtre les compétences en fonction de la recherche
    * @return array of object
    */
   const getComps = () => {
     let filteredComps = filteredCompsByPlayers;
-    if (searchComp.trim().length === 0) {
+    if (search.trim().length === 0) {
       filteredComps = filteredCompsByPlayers;
     }
     else {
       // on prépare search (variable intermediaire pour ne pas refaire à chaque boucle
-      const searchoptimized = searchComp.trim().toLowerCase();
+      const searchoptimized = search.trim().toLowerCase();
       // filter la liste des devises en fonction de search
       // eslint-disable-next-line arrow-body-style
       filteredComps = filteredCompsByPlayers.filter((competence) => {
@@ -109,25 +101,31 @@ const App = () => {
     return filteredComps;
   };
 
+  const filteredTraits = gettraits();
+  const filteredCompsByPlayers = getCompsByPlayer();
   const filteredComps = getComps();
+
   // https://i.pinimg.com/originals/22/31/25/2231252d6207c004bac24d3e6e6a3277.gif
   return (
     <>
       <img className="top-img" src="https://wallpaperset.com/w/full/e/a/e/190868.jpg" alt="logo" />
       <div className="app">
         <Header menus={menus} />
+        <Route exact path="/">
+          <img src={logo} alt="" />
+        </Route>
         <Route exact path="/traits">
           <Traits
             traitsData={filteredTraits}
-            searchValue={searchTraits}
+            searchValue={search}
             setSearchValue={handleChangeSearch}
           />
         </Route>
         <Route exact path="/competences">
           <Competences
             compData={filteredComps}
-            searchValue={searchComp}
-            setSearchValue={handleChangeSearchComp}
+            searchValue={search}
+            setSearchValue={handleChangeSearch}
             setPlayerValue={handleClicPlayers}
           />
         </Route>
