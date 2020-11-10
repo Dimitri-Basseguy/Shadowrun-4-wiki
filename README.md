@@ -1,2 +1,2 @@
 # Shadowrun-4-wiki
- Try to wiki the shadowrun 4 editions
+ A small wiki for my group players in the shadowrun RPG
