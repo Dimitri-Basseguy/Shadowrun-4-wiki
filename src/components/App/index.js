@@ -78,6 +78,8 @@ const App = () => {
     return filteredCompsByPlayers;
   };
 
+  const filteredCompsByPlayers = getCompsByPlayer();
+
   /**
    * Filtre les compétences en fonction de la recherche
    * @return array of object
@@ -102,7 +104,6 @@ const App = () => {
   };
 
   const filteredTraits = gettraits();
-  const filteredCompsByPlayers = getCompsByPlayer();
   const filteredComps = getComps();
 
   // https://i.pinimg.com/originals/22/31/25/2231252d6207c004bac24d3e6e6a3277.gif
