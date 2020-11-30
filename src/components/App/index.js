@@ -106,7 +106,6 @@ const App = () => {
   const filteredTraits = gettraits();
   const filteredComps = getComps();
 
-  // https://i.pinimg.com/originals/22/31/25/2231252d6207c004bac24d3e6e6a3277.gif
   return (
     <>
       <img className="top-img" src="https://wallpaperset.com/w/full/e/a/e/190868.jpg" alt="logo" />
